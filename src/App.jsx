@@ -1,4 +1,3 @@
-import './App.css';
 import CourseInterestLanding from './components/CourseInterestLanding';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

@@ -34,6 +34,9 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# CRA build output (no longer used, superseded by Vite's /dist)
+build/
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
