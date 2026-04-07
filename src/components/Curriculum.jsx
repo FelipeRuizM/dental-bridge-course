@@ -1,12 +1,10 @@
-import React from 'react'
-
 function Curriculum({ onOpen }) {
   const items = [
-    {p: "8 Comprehensive Modules", s: "Theory + Practice with downloadable tools (resume, checklists)"},
-    {p: "Dental Vocabulary", s: "Complete terminology with audio pronunciation guides"},
-    {p: "Understand the Role", s: "Describe the scope of a dental assistant and recognize legal and ethical limits"},
-    {p: "Clinical Readiness", s: "Communicate confidently in a clinic setting and assist during dental procedures"},
-    {p: "Job Preparation", s: "Create a north-america-style resume and apply for jobs with confidence"},
+    { p: "8 Comprehensive Modules", s: "Theory + Practice with downloadable tools (resume, checklists)" },
+    { p: "Dental Vocabulary", s: "Complete terminology with audio pronunciation guides" },
+    { p: "Understand the Role", s: "Describe the scope of a dental assistant and recognize legal and ethical limits" },
+    { p: "Clinical Readiness", s: "Communicate confidently in a clinic setting and assist during dental procedures" },
+    { p: "Job Preparation", s: "Create a north-america-style resume and apply for jobs with confidence" },
   ];
   return (
     <section id="curriculum" className="py-5 bg-light text-start">
@@ -16,9 +14,14 @@ function Curriculum({ onOpen }) {
           <div className="col-lg-7 text-start">
             <ol className="list-unstyled">
               {items.map((item, i) => (
-                <li key={item} className="border rounded-3 bg-white p-3 d-flex gap-3 mb-3">
-                  <div className="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center fw-bold" style={{ width: 32, height: 32 }}>{i + 1}</div>
-                  <div>
+                <li key={i} className="border rounded-3 bg-white p-3 d-flex gap-3 mb-3 align-items-start">
+                  <div
+                    className="fw-bold flex-shrink-0 lh-1 text-center"
+                    style={{ width: 36, fontSize: '1.75rem', color: '#00A896', fontFamily: 'Merriweather, serif' }}
+                  >
+                    {i + 1}
+                  </div>
+                  <div className="border-start ps-3">
                     <div className="fw-medium">{item.p}</div>
                     <div className="small text-secondary">{item.s}</div>
                   </div>

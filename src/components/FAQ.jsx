@@ -1,5 +1,3 @@
-import React from 'react'
-
 function FAQ() {
   const faqs = [
     { q: "Is this course only for dentists?", a: "Yes, it's designed for internationally trained dentists aiming to work in Canada or the USA." },
@@ -11,14 +9,30 @@ function FAQ() {
     <section id="faq" className="py-5 bg-light border-top">
       <div className="container">
         <h2 className="h2 fw-bold">Frequently asked</h2>
-        <div className="accordion mt-3" id="faqAcc">
+        <div className="row g-3 mt-3">
           {faqs.map((f, idx) => (
-            <div className="accordion-item" key={idx}>
-              <h2 className="accordion-header" id={`h${idx}`}>
-                <button className="accordion-button collapsed" type="button" onClick={(e) => { const body = e.currentTarget.parentElement?.nextElementSibling; if (body) body.classList.toggle("show"); }}>{f.q}</button>
-              </h2>
-              <div id={`c${idx}`} className="accordion-collapse collapse">
-                <div className="accordion-body small text-secondary">{f.a}</div>
+            <div className="col-lg-6" key={idx}>
+              <div className="accordion">
+                <div className="accordion-item border rounded-3">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#faqCollapse${idx}`}
+                      aria-expanded="false"
+                      aria-controls={`faqCollapse${idx}`}
+                    >
+                      {f.q}
+                    </button>
+                  </h2>
+                  <div
+                    id={`faqCollapse${idx}`}
+                    className="accordion-collapse collapse"
+                  >
+                    <div className="accordion-body small text-secondary">{f.a}</div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -27,6 +41,5 @@ function FAQ() {
     </section>
   );
 }
-
 
 export default FAQ

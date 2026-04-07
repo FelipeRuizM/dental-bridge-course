@@ -97,3 +97,33 @@ h1, h2, h3, h4, h5, h6,
   --bs-btn-active-border-color: #08162a;
   --bs-btn-focus-shadow-rgb: 10, 25, 47;
 }
+
+/* ─── NavBar: frosted glass ──────────────────────────────── */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── NavBar: text logotype ──────────────────────────────── */
+.logotype {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0A192F;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Hero: section background ───────────────────────────── */
+.hero-section {
+  background: linear-gradient(145deg, #ffffff 55%, rgba(0, 168, 150, 0.05) 100%);
+}
+
+/* ─── Hero: decorative glow behind form card ─────────────── */
+.hero-blob {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at 60% 40%, rgba(0, 168, 150, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
