@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ============================================================
+   DENTAL CAREER BRIDGE — Global Brand Tokens
+   Bootstrap 5.3 CSS variable overrides
+
+   Load order (guaranteed by index.jsx import sequence):
+     1. bootstrap/dist/css/bootstrap.min.css  ← framework base
+     2. this file                              ← overrides cascade on top
+   ============================================================ */
+
+/* ─── Brand palette (source-of-truth references) ────────────
+   Keep these two vars here so future tweaks are a one-liner.  */
+:root {
+  --brand-teal:     #00A896;
+  --brand-teal-rgb: 0, 168, 150;
+  --brand-navy:     #0A192F;
+  --brand-navy-rgb: 10, 25, 47;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ─── Bootstrap root-level overrides ─────────────────────── */
+:root {
+  /* Primary → Teal */
+  --bs-primary:          #00A896;
+  --bs-primary-rgb:      0, 168, 150;
+
+  /* Links */
+  --bs-link-color:       #00A896;
+  --bs-link-color-rgb:   0, 168, 150;
+  --bs-link-hover-color: #008f7e;
+
+  /* Dark → Navy */
+  --bs-dark:             #0A192F;
+  --bs-dark-rgb:         10, 25, 47;
+
+  /* Typography — body */
+  --bs-font-sans-serif:  'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --bs-body-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Border radius */
+  --bs-border-radius:     6px;
+  --bs-border-radius-sm:  4px;
+  --bs-border-radius-lg:  8px;
+  --bs-border-radius-xl:  10px;
+  --bs-border-radius-2xl: 12px;
+
+  /* Shadows */
+  --bs-box-shadow:    0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  --bs-box-shadow-sm: 0 2px  6px  -1px rgba(0, 0, 0, 0.04);
+  --bs-box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+
+  /* Focus ring */
+  --bs-focus-ring-color: rgba(0, 168, 150, 0.25);
+}
+
+/* ─── Heading font ────────────────────────────────────────────
+   Bootstrap has no CSS custom property for headings;
+   this is the only way to apply it without Sass.               */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+}
+
+/* ─── .btn-primary ────────────────────────────────────────── */
+.btn-primary {
+  --bs-btn-bg:               #00A896;
+  --bs-btn-border-color:     #00A896;
+  --bs-btn-hover-bg:         #008f7e;
+  --bs-btn-hover-border-color: #008f7e;
+  --bs-btn-active-bg:        #007a6b;
+  --bs-btn-active-border-color: #007a6b;
+  --bs-btn-disabled-bg:      #00A896;
+  --bs-btn-disabled-border-color: #00A896;
+  --bs-btn-focus-shadow-rgb: 0, 168, 150;
+  color: #fff;
+}
+
+/* ─── .btn-outline-primary ───────────────────────────────── */
+.btn-outline-primary {
+  --bs-btn-color:              #00A896;
+  --bs-btn-border-color:       #00A896;
+  --bs-btn-hover-color:        #fff;
+  --bs-btn-hover-bg:           #00A896;
+  --bs-btn-hover-border-color: #00A896;
+  --bs-btn-active-color:       #fff;
+  --bs-btn-active-bg:          #00A896;
+  --bs-btn-active-border-color: #00A896;
+  --bs-btn-focus-shadow-rgb:   0, 168, 150;
+}
+
+/* ─── .btn-dark → Navy ───────────────────────────────────── */
+.btn-dark {
+  --bs-btn-bg:               #0A192F;
+  --bs-btn-border-color:     #0A192F;
+  --bs-btn-hover-bg:         #0d2242;
+  --bs-btn-hover-border-color: #0d2242;
+  --bs-btn-active-bg:        #08162a;
+  --bs-btn-active-border-color: #08162a;
+  --bs-btn-focus-shadow-rgb: 10, 25, 47;
 }
