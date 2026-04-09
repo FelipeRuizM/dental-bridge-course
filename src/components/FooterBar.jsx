@@ -1,6 +1,6 @@
 function FooterBar() {
   return (
-    <footer className="py-4 mt-auto" style={{ background: '#0A192F' }}>
+    <footer className="py-4 mt-auto" style={{ background: '#537D85' }}>
       <div className="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
         <small className="text-white-50">© {new Date().getFullYear()} Dental Career Bridge. All rights reserved.</small>
         <div className="d-flex flex-wrap justify-content-center gap-3 small">

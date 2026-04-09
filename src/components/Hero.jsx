@@ -1,4 +1,6 @@
-function Hero({ onOpen, form, setForm, onSubmit, loading, submitted, error }) {
+import logo from '../assets/logo.jpeg'
+
+function Hero({ onOpen }) {
   return (
     <section id="hero" className="py-5 text-start hero-section">
       <div className="container">
@@ -22,38 +24,25 @@ function Hero({ onOpen, form, setForm, onSubmit, loading, submitted, error }) {
             </ul>
             <div className="d-flex flex-column flex-sm-row gap-2 mt-4">
               <button className="btn btn-primary btn-lg" onClick={onOpen}>Join the Interest List</button>
-              <a href="#benefits" className="btn btn-outline-secondary btn-lg">See how it works</a>
+              <a href="#about" className="btn btn-outline-secondary btn-lg">See how it works</a>
             </div>
             <div className="form-text mt-2">No spam. You can unsubscribe anytime.</div>
           </div>
-          <div className="col-lg-6 text-start position-relative">
-            <div className="hero-blob" aria-hidden="true" />
-            <div className="card shadow position-relative" style={{ zIndex: 1 }}>
-              <div className="card-body rounded-3 text-start" style={{ background: '#0A192F' }}>
-                <p className="small text-white-50 mb-1">Early sign-up bonus</p>
-                <h3 className="h3 fw-bold text-white">Get the Course Plan</h3>
-                <p className="small text-white-50 mb-3">Enter your email to preview a free lesson and enter the interest list.</p>
-                {submitted ? (
-                  <div className="text-center py-3">
-                    <h4 className="text-white fw-bold mb-2">You're on the list!</h4>
-                    <p className="text-white-50 small mb-0">Check your inbox — your course plan is on its way.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={onSubmit}>
-                    <div className="mb-2"><input type="text" className="form-control" required placeholder="Your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
-                    <div className="mb-2"><input type="email" className="form-control" required placeholder="Email address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
-                    <button type="submit" className="btn btn-primary w-100 py-2" disabled={loading}>{loading ? "Submitting…" : "Send me the course plan"}</button>
-                    {error && <div className="alert alert-danger py-2 mt-2 mb-0 small">{error}</div>}
-                    <div className="form-text text-white-50 mt-2">We will only email you about this course.</div>
-                  </form>
-                )}
-              </div>
+          <div className="col-lg-6 d-flex align-items-center justify-content-center">
+            <div className="position-relative">
+              <div className="hero-blob" aria-hidden="true" />
+              <img
+                src={logo}
+                alt="Dental Career Bridge logo"
+                className="img-fluid position-relative"
+                style={{ maxHeight: 380, objectFit: 'contain', zIndex: 1 }}
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default Hero

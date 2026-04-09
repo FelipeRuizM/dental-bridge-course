@@ -32,7 +32,7 @@ function Testimonials() {
                 <div className="card-body d-flex flex-column gap-2 pb-2">
                   <div className="d-flex gap-1">
                     {[...Array(5)].map((_, s) => (
-                      <Star key={s} size={14} fill="#00A896" color="#00A896" />
+                      <Star key={s} size={14} fill="#519AA9" color="#519AA9" />
                     ))}
                   </div>
                   <blockquote className="small text-secondary mb-0 flex-grow-1">
@@ -43,7 +43,7 @@ function Testimonials() {
                   <div className="d-flex align-items-center gap-2">
                     <div
                       className="rounded-circle d-flex align-items-center justify-content-center text-white fw-semibold flex-shrink-0"
-                      style={{ width: 36, height: 36, background: '#00A896', fontSize: '0.75rem' }}
+                      style={{ width: 36, height: 36, background: '#519AA9', fontSize: '0.75rem' }}
                     >
                       {t.initials}
                     </div>

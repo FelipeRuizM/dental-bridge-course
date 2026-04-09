@@ -3,17 +3,17 @@ import { TrendingUp, DollarSign, Route } from 'lucide-react'
 function AboutCourse() {
   const advantages = [
     {
-      icon: <TrendingUp size={20} color="#00A896" strokeWidth={1.75} />,
+      icon: <TrendingUp size={20} color="#519AA9" strokeWidth={1.75} />,
       title: "High Demand",
       desc: "Dental assistants are consistently needed across Canada and the USA, making it one of the fastest ways into the field.",
     },
     {
-      icon: <DollarSign size={20} color="#00A896" strokeWidth={1.75} />,
+      icon: <DollarSign size={20} color="#519AA9" strokeWidth={1.75} />,
       title: "Better Than Entry-Level",
       desc: "Dental assisting pays more than most entry-level jobs and puts you inside a clinical environment from day one.",
     },
     {
-      icon: <Route size={20} color="#00A896" strokeWidth={1.75} />,
+      icon: <Route size={20} color="#519AA9" strokeWidth={1.75} />,
       title: "Multiple Pathways Forward",
       desc: "From Dental Assisting you can become certified, pursue Hygiene, or validate your dental degree — on your own timeline.",
     },
@@ -45,8 +45,8 @@ function AboutCourse() {
 
           {/* Left — dark card explaining the course purpose */}
           <div className="col-lg-5">
-            <div className="rounded-3 p-4 p-lg-5 h-100" style={{ background: '#0A192F' }}>
-              <p className="small fw-semibold mb-3" style={{ color: '#00A896', letterSpacing: '.06em' }}>
+            <div className="rounded-3 p-4 p-lg-5 h-100" style={{ background: '#537D85' }}>
+              <p className="small fw-semibold mb-3" style={{ color: '#A8D8DE', letterSpacing: '.06em' }}>
                 ABOUT THIS COURSE
               </p>
               <h3 className="h4 fw-bold text-white mb-3">
@@ -80,7 +80,7 @@ function AboutCourse() {
                   <div className="card-body d-flex gap-3 align-items-start">
                     <div
                       className="flex-shrink-0 d-flex align-items-center justify-content-center rounded-3"
-                      style={{ width: 42, height: 42, background: 'rgba(0, 168, 150, 0.08)' }}
+                      style={{ width: 42, height: 42, background: 'rgba(81, 154, 169, 0.1)' }}
                     >
                       {a.icon}
                     </div>
@@ -95,9 +95,9 @@ function AboutCourse() {
               {/* Career pathway callout */}
               <div
                 className="rounded-3 p-4 border"
-                style={{ background: 'rgba(0, 168, 150, 0.05)', borderColor: 'rgba(0, 168, 150, 0.2) !important' }}
+                style={{ background: 'rgba(168, 216, 222, 0.12)', borderColor: 'rgba(81, 154, 169, 0.25) !important' }}
               >
-                <p className="small fw-semibold mb-2" style={{ color: '#00A896' }}>LONG-TERM CAREER GROWTH</p>
+                <p className="small fw-semibold mb-2" style={{ color: '#519AA9' }}>LONG-TERM CAREER GROWTH</p>
                 <p className="small text-secondary mb-3">
                   Starting as a Dental Assistant is a strategic first step that opens multiple pathways.
                   It is a crucial learning phase that helps you grow, adapt, and move forward with

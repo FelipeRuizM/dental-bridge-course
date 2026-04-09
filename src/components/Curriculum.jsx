@@ -17,7 +17,7 @@ function Curriculum({ onOpen }) {
                 <li key={i} className="border rounded-3 bg-white p-3 d-flex gap-3 mb-3 align-items-start">
                   <div
                     className="fw-bold flex-shrink-0 lh-1 text-center"
-                    style={{ width: 36, fontSize: '1.75rem', color: '#00A896', fontFamily: 'Merriweather, serif' }}
+                    style={{ width: 36, fontSize: '1.75rem', color: '#519AA9', fontFamily: 'Merriweather, serif' }}
                   >
                     {i + 1}
                   </div>

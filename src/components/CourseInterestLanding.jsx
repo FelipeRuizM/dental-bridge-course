@@ -54,7 +54,7 @@ export default function CourseInterestLanding() {
   return (
     <div className="bg-light min-vh-100 d-flex flex-column">
       <NavBar onOpen={handleOpenModal} />
-      <Hero onOpen={handleOpenModal} form={form} setForm={setForm} onSubmit={onSubmit} loading={loading} submitted={submitted} error={error} />
+      <Hero onOpen={handleOpenModal} />
       <AboutCourse />
       <Benefits />
       <Curriculum onOpen={handleOpenModal} />

@@ -4,17 +4,17 @@ function Benefits() {
   const cards = [
     {
       title: "International Dentists",
-      icon: <GraduationCap size={22} color="#00A896" strokeWidth={1.75} />,
+      icon: <GraduationCap size={22} color="#519AA9" strokeWidth={1.75} />,
       desc: "Dentists who want a first job in Canada or the USA and need to understand how dental assisting works to start earning experience fast.",
     },
     {
       title: "Immigration Preparation",
-      icon: <FileCheck size={22} color="#00A896" strokeWidth={1.75} />,
+      icon: <FileCheck size={22} color="#519AA9" strokeWidth={1.75} />,
       desc: "Professionals preparing for immigration who want to feel confident from Day 1 on the job with technical terms, workflows, and cultural expectations.",
     },
     {
       title: "Job Market Entry",
-      icon: <Briefcase size={22} color="#00A896" strokeWidth={1.75} />,
+      icon: <Briefcase size={22} color="#519AA9" strokeWidth={1.75} />,
       desc: "Permanent residents needing to enter the job market quickly and anyone who wants to feel confident as a dental assistant in North America.",
     },
   ];

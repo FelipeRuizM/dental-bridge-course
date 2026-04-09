@@ -8,32 +8,39 @@
    ============================================================ */
 
 /* ─── Brand palette (source-of-truth references) ────────────
-   Keep these two vars here so future tweaks are a one-liner.  */
+   frosted-blue: #A8D8DE  /  pacific-blue: #519AA9  /  pine-blue: #537D85 */
 :root {
-  --brand-teal:     #00A896;
-  --brand-teal-rgb: 0, 168, 150;
-  --brand-navy:     #0A192F;
-  --brand-navy-rgb: 10, 25, 47;
+  --brand-primary:     #519AA9;   /* pacific-blue  */
+  --brand-primary-rgb: 81, 154, 169;
+  --brand-dark:        #537D85;   /* pine-blue     */
+  --brand-dark-rgb:    83, 125, 133;
+  --brand-frosted:     #A8D8DE;   /* frosted-blue  */
+  --brand-frosted-rgb: 168, 216, 222;
 }
 
 /* ─── Bootstrap root-level overrides ─────────────────────── */
 :root {
-  /* Primary → Teal */
-  --bs-primary:          #00A896;
-  --bs-primary-rgb:      0, 168, 150;
+  /* Primary → Pacific Blue */
+  --bs-primary:          #519AA9;
+  --bs-primary-rgb:      81, 154, 169;
 
   /* Links */
-  --bs-link-color:       #00A896;
-  --bs-link-color-rgb:   0, 168, 150;
-  --bs-link-hover-color: #008f7e;
+  --bs-link-color:       #519AA9;
+  --bs-link-color-rgb:   81, 154, 169;
+  --bs-link-hover-color: #3d8394;
 
-  /* Dark → Navy */
-  --bs-dark:             #0A192F;
-  --bs-dark-rgb:         10, 25, 47;
+  /* Dark → Pine Blue */
+  --bs-dark:             #537D85;
+  --bs-dark-rgb:         83, 125, 133;
 
   /* Typography — body */
   --bs-font-sans-serif:  'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --bs-body-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Page background */
+  --bs-body-bg:   #FCFDFE;
+  --bs-light:     #FCFDFE;
+  --bs-light-rgb: 252, 253, 254;
 
   /* Border radius */
   --bs-border-radius:     6px;
@@ -48,12 +55,7 @@
   --bs-box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
 
   /* Focus ring */
-  --bs-focus-ring-color: rgba(0, 168, 150, 0.25);
-
-  /* Page background — warm paper tone */
-  --bs-body-bg:   #ffffff;
-  --bs-light:     #ffffff;
-  --bs-light-rgb: 255, 255, 255;
+  --bs-focus-ring-color: rgba(81, 154, 169, 0.25);
 }
 
 /* ─── Heading font ────────────────────────────────────────────
@@ -67,45 +69,45 @@ h1, h2, h3, h4, h5, h6,
 
 /* ─── .btn-primary ────────────────────────────────────────── */
 .btn-primary {
-  --bs-btn-bg:               #00A896;
-  --bs-btn-border-color:     #00A896;
-  --bs-btn-hover-bg:         #008f7e;
-  --bs-btn-hover-border-color: #008f7e;
-  --bs-btn-active-bg:        #007a6b;
-  --bs-btn-active-border-color: #007a6b;
-  --bs-btn-disabled-bg:      #00A896;
-  --bs-btn-disabled-border-color: #00A896;
-  --bs-btn-focus-shadow-rgb: 0, 168, 150;
+  --bs-btn-bg:               #519AA9;
+  --bs-btn-border-color:     #519AA9;
+  --bs-btn-hover-bg:         #3d8394;
+  --bs-btn-hover-border-color: #3d8394;
+  --bs-btn-active-bg:        #326d7c;
+  --bs-btn-active-border-color: #326d7c;
+  --bs-btn-disabled-bg:      #519AA9;
+  --bs-btn-disabled-border-color: #519AA9;
+  --bs-btn-focus-shadow-rgb: 81, 154, 169;
   color: #fff;
 }
 
 /* ─── .btn-outline-primary ───────────────────────────────── */
 .btn-outline-primary {
-  --bs-btn-color:              #00A896;
-  --bs-btn-border-color:       #00A896;
+  --bs-btn-color:              #519AA9;
+  --bs-btn-border-color:       #519AA9;
   --bs-btn-hover-color:        #fff;
-  --bs-btn-hover-bg:           #00A896;
-  --bs-btn-hover-border-color: #00A896;
+  --bs-btn-hover-bg:           #519AA9;
+  --bs-btn-hover-border-color: #519AA9;
   --bs-btn-active-color:       #fff;
-  --bs-btn-active-bg:          #00A896;
-  --bs-btn-active-border-color: #00A896;
-  --bs-btn-focus-shadow-rgb:   0, 168, 150;
+  --bs-btn-active-bg:          #519AA9;
+  --bs-btn-active-border-color: #519AA9;
+  --bs-btn-focus-shadow-rgb:   81, 154, 169;
 }
 
-/* ─── .btn-dark → Navy ───────────────────────────────────── */
+/* ─── .btn-dark → Pine Blue ──────────────────────────────── */
 .btn-dark {
-  --bs-btn-bg:               #0A192F;
-  --bs-btn-border-color:     #0A192F;
-  --bs-btn-hover-bg:         #0d2242;
-  --bs-btn-hover-border-color: #0d2242;
-  --bs-btn-active-bg:        #08162a;
-  --bs-btn-active-border-color: #08162a;
-  --bs-btn-focus-shadow-rgb: 10, 25, 47;
+  --bs-btn-bg:               #537D85;
+  --bs-btn-border-color:     #537D85;
+  --bs-btn-hover-bg:         #3e616a;
+  --bs-btn-hover-border-color: #3e616a;
+  --bs-btn-active-bg:        #33515a;
+  --bs-btn-active-border-color: #33515a;
+  --bs-btn-focus-shadow-rgb: 83, 125, 133;
 }
 
 /* ─── NavBar: frosted glass ──────────────────────────────── */
 .navbar-glass {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(254, 254, 254, 0.88) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -115,20 +117,20 @@ h1, h2, h3, h4, h5, h6,
   font-family: 'Merriweather', Georgia, serif;
   font-weight: 700;
   font-size: 1rem;
-  color: #0A192F;
+  color: #537D85;
   letter-spacing: -0.01em;
 }
 
 /* ─── Hero: section background ───────────────────────────── */
 .hero-section {
-  background: linear-gradient(145deg, #f7f2f2 55%, rgba(0, 168, 150, 0.05) 100%);
+  background: linear-gradient(145deg, #FCFDFE 55%, rgba(168, 216, 222, 0.22) 100%);
 }
 
-/* ─── Hero: decorative glow behind form card ─────────────── */
+/* ─── Hero: decorative glow behind logo ──────────────────── */
 .hero-blob {
   position: absolute;
   inset: -40px;
-  background: radial-gradient(ellipse at 60% 40%, rgba(0, 168, 150, 0.12) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 60% 40%, rgba(168, 216, 222, 0.38) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
