@@ -18,6 +18,7 @@ function NavBar({ onOpen }) {
         </button>
         <div className="collapse navbar-collapse" id="mainNav">
           <ul className="navbar-nav ms-auto me-3 gap-1">
+            <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
             <li className="nav-item"><a className="nav-link" href="#benefits">Benefits</a></li>
             <li className="nav-item"><a className="nav-link" href="#curriculum">Curriculum</a></li>
             <li className="nav-item"><a className="nav-link" href="#testimonials">Testimonials</a></li>

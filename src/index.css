@@ -49,6 +49,11 @@
 
   /* Focus ring */
   --bs-focus-ring-color: rgba(0, 168, 150, 0.25);
+
+  /* Page background — warm paper tone */
+  --bs-body-bg:   #ffffff;
+  --bs-light:     #ffffff;
+  --bs-light-rgb: 255, 255, 255;
 }
 
 /* ─── Heading font ────────────────────────────────────────────
@@ -116,7 +121,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* ─── Hero: section background ───────────────────────────── */
 .hero-section {
-  background: linear-gradient(145deg, #ffffff 55%, rgba(0, 168, 150, 0.05) 100%);
+  background: linear-gradient(145deg, #f7f2f2 55%, rgba(0, 168, 150, 0.05) 100%);
 }
 
 /* ─── Hero: decorative glow behind form card ─────────────── */

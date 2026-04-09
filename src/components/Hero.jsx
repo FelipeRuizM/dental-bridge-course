@@ -1,4 +1,4 @@
-function Hero({ onOpen, form, setForm, onSubmit, loading }) {
+function Hero({ onOpen, form, setForm, onSubmit, loading, submitted, error }) {
   return (
     <section id="hero" className="py-5 text-start hero-section">
       <div className="container">
@@ -33,12 +33,20 @@ function Hero({ onOpen, form, setForm, onSubmit, loading }) {
                 <p className="small text-white-50 mb-1">Early sign-up bonus</p>
                 <h3 className="h3 fw-bold text-white">Get the Course Plan</h3>
                 <p className="small text-white-50 mb-3">Enter your email to preview a free lesson and enter the interest list.</p>
-                <form onSubmit={onSubmit}>
-                  <div className="mb-2"><input type="text" className="form-control" required placeholder="Your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
-                  <div className="mb-2"><input type="email" className="form-control" required placeholder="Email address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
-                  <button type="submit" className="btn btn-primary w-100 py-2" disabled={loading}>{loading ? "Submitting…" : "Send me the course plan"}</button>
-                  <div className="form-text text-white-50 mt-2">We will only email you about this course.</div>
-                </form>
+                {submitted ? (
+                  <div className="text-center py-3">
+                    <h4 className="text-white fw-bold mb-2">You're on the list!</h4>
+                    <p className="text-white-50 small mb-0">Check your inbox — your course plan is on its way.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={onSubmit}>
+                    <div className="mb-2"><input type="text" className="form-control" required placeholder="Your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
+                    <div className="mb-2"><input type="email" className="form-control" required placeholder="Email address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
+                    <button type="submit" className="btn btn-primary w-100 py-2" disabled={loading}>{loading ? "Submitting…" : "Send me the course plan"}</button>
+                    {error && <div className="alert alert-danger py-2 mt-2 mb-0 small">{error}</div>}
+                    <div className="form-text text-white-50 mt-2">We will only email you about this course.</div>
+                  </form>
+                )}
               </div>
             </div>
           </div>

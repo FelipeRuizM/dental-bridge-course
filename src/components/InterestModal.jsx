@@ -1,6 +1,6 @@
 import React from "react";
 
-function InterestModal({ isOpen, onClose, form, setForm, onSubmit, loading }) {
+function InterestModal({ isOpen, onClose, form, setForm, onSubmit, loading, submitted, error }) {
   if (!isOpen) return null;
 
   return (
@@ -12,39 +12,49 @@ function InterestModal({ isOpen, onClose, form, setForm, onSubmit, loading }) {
             <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
           </div>
           <div className="modal-body p-4">
-            <p className="text-secondary mb-4">
-              Sign up to get updates, a free preview video, and an outline of our e‑book guide.
-            </p>
-            <form onSubmit={onSubmit}>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="nameInput"
-                  placeholder="John Doe"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  required
-                />
-                <label htmlFor="nameInput">Full Name</label>
+            {submitted ? (
+              <div className="text-center py-3">
+                <h5 className="fw-bold mb-2">You're on the list!</h5>
+                <p className="text-secondary small mb-0">Check your inbox for your course plan and free preview lesson.</p>
               </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="emailInput"
-                  placeholder="name@example.com"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  required
-                />
-                <label htmlFor="emailInput">Email Address</label>
-              </div>
-              <button type="submit" className="btn btn-primary w-100 py-2" disabled={loading}>
-                {loading ? "Submitting…" : "Join Now"}
-              </button>
-              <div className="form-text mt-2">We respect your privacy. Unsubscribe anytime.</div>
-            </form>
+            ) : (
+              <>
+                <p className="text-secondary mb-4">
+                  Sign up to get updates, a free preview video, and an outline of our e‑book guide.
+                </p>
+                <form onSubmit={onSubmit}>
+                  <div className="form-floating mb-3">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="nameInput"
+                      placeholder="John Doe"
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      required
+                    />
+                    <label htmlFor="nameInput">Full Name</label>
+                  </div>
+                  <div className="form-floating mb-3">
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="emailInput"
+                      placeholder="name@example.com"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      required
+                    />
+                    <label htmlFor="emailInput">Email Address</label>
+                  </div>
+                  <button type="submit" className="btn btn-primary w-100 py-2" disabled={loading}>
+                    {loading ? "Submitting…" : "Join Now"}
+                  </button>
+                  {error && <div className="alert alert-danger py-2 mt-3 mb-0 small">{error}</div>}
+                  <div className="form-text mt-2">We respect your privacy. Unsubscribe anytime.</div>
+                </form>
+              </>
+            )}
           </div>
         </div>
       </div>
